@@ -1,0 +1,47 @@
+{% extends "OGVinyl/__base.html" %} 
+{% block content %}
+{% load static %}
+{% static "" as baseUrl %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>OGVinyl</h1>
+    <p>LP's, EP's, Singles, Rarities, Collectibles</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+  </div>
+</div>
+<h2 class="h1 pb20 pt20">Featured records</h2>
+{% include "OGVinyl/_carousel.html" %}
+<h2 class="h1 pb20 pt20">Latest acquisitions</h2>
+{% if latest_records %}
+{% for record in latest_records  %}
+<hr class="featurette-divider">
+<div class="row featurette">
+{% if forloop.counter|divisibleby:2 %}
+  <div class="col-md-7">
+    <h2 class="featurette-heading"><a href="/ogvinyl/record/{{ record.id }}">{{ record.name }}</a><br><span class="text-muted h3">{{ record.artist }}</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo
+      cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5 pb20 pt20">
+    <a href="/ogvinyl/record/{{ record.id }}">
+      <img src="{{ baseUrl }}OGVinyl/img/covers/{{ record.image }}" class="featurette-image img-responsive center-block" alt="{{ record.name }} by {{ record.artist }}" width="400">
+    </a>
+  </div>
+{% else %}
+  <div class="col-md-7 col-md-push-5">
+    <h2 class="featurette-heading"><a href="/ogvinyl/record/{{ record.id }}">{{ record.name }}</a><br><span class="text-muted h3">{{ record.artist }}</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo
+      cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5 col-md-pull-7 pb20 pt20">
+    <a href="/ogvinyl/record/{{ record.id }}">
+      <img src="{{ baseUrl }}OGVinyl/img/covers/{{ record.image }}" class="featurette-image img-responsive center-block"  alt="{{ record.name }} by {{ record.artist }}" width="400">
+    </a>
+  </div>
+{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+<hr class="featurette-divider">
+
+{% endblock %}

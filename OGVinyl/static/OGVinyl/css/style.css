@@ -1,0 +1,179 @@
+body {
+    padding-left: 100px;
+    padding-right: 100px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f9+0,e3eaed+37,c8d7dc+100 */
+    background: rgb(247,247,249); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(247,247,249,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(247,247,249,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(247,247,249,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f9', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+}
+
+/* PADDINGS */
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+background-color: black;
+color: white;
+padding-top: 25px;
+padding-bottom: 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* JUMBOTRON */
+
+.jumbotron {
+    background-image: url('/static/OGVinyl/img/banner.png');
+    margin-top: 50px;
+    margin-bottom:0px;
+}
+
+.jumbotron h1 {
+    color: white;
+}
+
+.jumbotron p {
+    color: white;
+}
+
+/* TABS */
+
+.record {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.record img {
+    float: left;
+    margin-right: 20px;
+}
+
+.record h4 {
+    margin-bottom: 0px;   
+}
+
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+
+.tab-links {
+    margin-bottom: 0px;
+}
+
+    /* Clearfix */
+.tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+.tab-links li {
+        margin:0px 0px;
+        float:left;
+        list-style:none;
+        /*border-left: 1px solid black;*/
+        /*border-right: 1px solid black;*/
+    }
+
+.tab-links:first-child {
+        box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
+    }
+ 
+.tab-links a {
+        padding:9px 15px;
+        display:inline-block;
+        /*border-radius:3px 3px 0px 0px;*/
+        background:#7FB5DA;
+        font-size:16px;
+        font-weight:600;
+        color:#4c4c4c;
+        transition:all linear 0.15s;
+    }
+ 
+.tab-links a:hover {
+        background:#a7cce5;
+        text-decoration:none;
+    }
+ 
+li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+.tab-content {
+        padding:15px;
+        /*border-radius:3px;*/
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+ 
+.tab {
+        display:none;
+    }
+ 
+.tab.active {
+        display:block;
+    }
+
+ul {
+    -webkit-padding-start: 0;
+}
+
+/* CAROUSEL */
+
+.carousel-inner.onebyone-carosel { 
+    margin: auto; width: 90%; 
+}
+
+.onebyone-carosel .active.left { 
+    left: -33.33%; 
+}
+
+.onebyone-carosel .active.right { 
+    left: 33.33%; 
+}
+
+.onebyone-carosel .next { 
+    left: 33.33%; 
+}
+
+.onebyone-carosel .prev { 
+    left: -33.33%; 
+}
+
+/* RECORD DETAIL */
+
+.record-detail {
+    margin: 100px 0 50px 0;
+}

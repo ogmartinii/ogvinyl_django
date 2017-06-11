@@ -1,0 +1,27 @@
+{% extends "OGVinyl/__base.html" %} 
+{% block content %} 
+{% load static %} 
+{% static "" as baseUrl %}
+<div class="jumbotron">
+  <h1 class="display-3">OGVinyl</h1>
+  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+    nibh, ut fermentum massa justo sit amet risus.</p>
+  <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+</div>
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#by-name">Records by name</a></li>
+        <li><a href="#by-artist">Records by artist</a></li>
+        <li><a href="#by-genre">Records by genres</a></li>
+        <li><a href="#by-year">Records by year</a></li>
+        <li><a href="#by-country">Records by country</a></li>
+    </ul>
+    <div class="tab-content">
+        {% include "OGVinyl/_records-name.html" %}
+        {% include "OGVinyl/_records-artist.html" %}
+        {% include "OGVinyl/_records-genre.html" %}
+        {% include "OGVinyl/_records-year.html" %}
+        {% include "OGVinyl/_records-country.html" %}
+    </div>
+</div>
+{% endblock %}

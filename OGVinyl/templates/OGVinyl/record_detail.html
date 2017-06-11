@@ -1,0 +1,21 @@
+{% extends "OGVinyl/__base.html" %} 
+{% load static %} 
+{% static "" as baseUrl %}
+{% block content %}
+  <div class="row record record-detail">
+    {% if record %} 
+    <div class="col-md-4">
+      <img src="/static/OGVinyl/img/covers/{{ record.image }}" alt="{{ record.name }} by {{ record.artist }}" width="400">
+    </div>
+    <div class="col-md-8">
+      <h1>{{ record.name }}</h1>
+      <h4>by {{ record.artist }}</h4>
+      <p class="pt20">{{ record.description }}</p>
+    </div>
+    {{ record.year }} 
+    {{ record.genre }} 
+    {% else %}
+    <p>No entry for this record</p>
+    {% endif %}
+  </div>
+{% endblock %}

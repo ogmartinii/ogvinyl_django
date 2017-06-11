@@ -1,0 +1,31 @@
+<div id="by-name" class="tab active">
+  <div class="row">
+    {% if record_list %} 
+    {% for record in record_list %}
+    <div class="col-lg-12">
+      <div class="record">
+        <a href="/ogvinyl/record/{{ record.id }}">
+          <img src="{{ baseUrl }}OGVinyl/img/covers/{{ record.image }}" width="85" height="85">
+        </a>
+        <h4 class="h4">{{ record.name }}</h4><small>by {{ record.artist }}</small>
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+      </div>
+    </div>
+    {% endfor %} 
+    {% endif %}
+    <div class="pagination-wrapper text-center">
+      <div class="pagination">
+        <span class="step-links">
+        {% if record_list.has_previous %}
+            <a href="?page={{ record_list.previous_page_number }}"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ record_list.number }} of {{ record_list.paginator.num_pages }}
+        </span> {% if record_list.has_next %}
+        <a href="?page={{ record_list.next_page_number }}"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>        {% endif %}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

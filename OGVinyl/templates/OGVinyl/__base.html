@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{% static "OGVinyl/css/bootstrap.min.css" %}"> 
+  <link rel="stylesheet" href="{% static "OGVinyl/css/style.css" %}">
+  {% endblock %} 
+  {% block javascript %}
+  <script src="{% static "OGVinyl/js/jquery-3.2.1.min.js" %}"></script>
+  <script src="{% static "OGVinyl/js/jquery-migrate-1.4.1.min.js" %}"></script>
+  <script src="{% static "OGVinyl/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "OGVinyl/js/carousel.js" %}"></script>
+  <script src="{% static "OGVinyl/js/script.js" %}"></script>
+  {% endblock %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OGVinyl | 'sup nigga</title>
+</head>
+<body>
+  <header>
+    {% include "OGVinyl/_navbar.html" %}
+  </header>
+  <div id="main" role="main">
+    <div class="container-fluid">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+<footer id="footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-center">created by OGM2 using Django</p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>
