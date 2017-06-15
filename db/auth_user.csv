@@ -1,0 +1,2 @@
+﻿id,password,last_login,is_superuser,username,first_name,last_name,email,is_staff,is_active,date_joined
+1,pbkdf2_sha256$36000$6WafAqsdH0vp$Rozg2KwzvfGLllTwwGoPjBu0DHfoYx/2aLDCvUq41bQ=,2017-05-25 05:19:19.893441,1,og,"","",drsnejridic@gmail.com,1,1,2017-05-25 05:18:50.073277

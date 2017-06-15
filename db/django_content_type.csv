@@ -1,0 +1,11 @@
+﻿id,app_label,model
+1,admin,logentry
+3,auth,group
+2,auth,permission
+4,auth,user
+5,contenttypes,contenttype
+10,OGVinyl,artist
+9,OGVinyl,format
+8,OGVinyl,genre
+7,OGVinyl,record
+6,sessions,session
